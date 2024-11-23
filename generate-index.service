@@ -1,0 +1,14 @@
+[Unit]
+Description=generate index
+Wants=network-online.target 
+After=network-online.target
+#For optional dependency directive, add Wants=_B_ and After=_B_.  https://wiki.archlinux.org/title/Systemd 2.1 Handling dependencies 
+
+[Service]
+Type=oneshot
+User=webgen
+Group=webgen
+ExecStart=/var/lib/webgen/bin/generate_index
+WorkingDirectory=/var/lib/webgen
+RemainAfterExit=yes
+# Type of oneshot do single job and then exit. Add RemainAfterExit=yes ensure service as active after the process has exited. https://wiki.archlinux.org/title/Systemd 2.2 service type
