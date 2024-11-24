@@ -11,4 +11,4 @@ Group=webgen
 ExecStart=/var/lib/webgen/bin/generate_index
 WorkingDirectory=/var/lib/webgen
 RemainAfterExit=yes
-# Type of oneshot do single job and then exit. Add RemainAfterExit=yes ensure service as active after the process has exited. https://wiki.archlinux.org/title/Systemd 2.2 service type
+# Type of oneshot do single job and then exit. Add RemainAfterExit=yes ensure service as active after the process has exited. Ref: https://wiki.archlinux.org/title/Systemd 2.2 service type
