@@ -2,7 +2,7 @@
 Description=generate index
 Wants=network-online.target 
 After=network-online.target
-#For optional dependency directive, add Wants=_B_ and After=_B_.  https://wiki.archlinux.org/title/Systemd 2.1 Handling dependencies 
+#For optional dependency directive, add Wants=_B_ and After=_B_.  Ref: https://wiki.archlinux.org/title/Systemd 2.1 Handling dependencies, Week 10 lecture note
 
 [Service]
 Type=oneshot
